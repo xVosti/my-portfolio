@@ -53,10 +53,9 @@ a:active {
 }
 
 .card {
- background-color: rgb(43, 42, 41);
- padding: 15px 20px;
- margin-bottom: 20px;
-border-radius: 20px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
 }
 
 .contactFlex {
@@ -64,9 +63,10 @@ border-radius: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;    
-    padding: 20px 40px;
+    padding: 50px 40px;
     border-radius: 15px;
     margin: 0 20px;
+
 }
 
 .contactFlex span {
