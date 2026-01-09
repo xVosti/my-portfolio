@@ -5,25 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume</title>
     <link href="styles.css" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
     <header class="me">
-        <h1>Вовк Ростислав</h1>
-        <p>Мета стати Frontend Devolpment</p>
+        <div class="hero-content">
+            <h1>Hi I'm Vovk Rostislav</h1>
+            <p >Aspiring Frontend Developer</p>
+        
+            <div class="buttons-row">
+                <a href="#contact-section" class="btn-primary">Contact me</a>
+                <a href="https://github.com/xVosti" target="_blank" class="btn-secondary">See my project</a>   
+            </div>
+        </div>
+        
+        <div class="hero-image">
+            <img src="image/hero-image.jpg" alt="Rostisalv" style="max-width: 400px; border-radius: 20px;" >
+        </div>
     </header>
 
-     <h2 style="text-align: center;">Мої вміння</h2>
+     <h2 style="text-align: center;">Tech Stack</h2>
 
     <main class="info">    
-        <p class="card">HTML Base</p>
-        <p class="card">CSS Base</p>
-        <p class="card">JavaScript Soon</p>
+        <p class="card">HTML5</p>
+        <p class="card">CSS3</p>
+        <p class="card">JavaScript Learning</p>
         <p class="card">React Future</p>
+        <a href="https://github.com/xVosti" target="_blank" class="card github-card">
+            <i class="fa-brands fa-github"></i> 
+            <span>My GitHub</span>
+        </a>
     </main>
 
-    <footer class="contactFlex">
-        <p> Зв'язатися можна по цьому посиланні <a href="https://t.me/Ogonek2_20" target="_blank">Telegram</a> </p>
-        <p>Або vovkrostislav131@gmail.com</p>
-    </footer>
+    <footer class="contactFlex" id="contact-section">
+        <p> Contact me via Telegram <a href="https://t.me/Ogonek2_20" target="_blank">Telegram <i class="fa-brands fa-telegram"></i></a> </p>
+        <p><a href="mailto:vovkrostislav131@gmail.com" class="footer-link">vovkrostislav131@gmail.com</a><i class="fa-solid fa-envelope"></i></p>
+    </footer> 
 </body>
 </html>
