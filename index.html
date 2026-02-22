@@ -6,28 +6,41 @@
     <title>Resume</title>
     <link href="styles.css" rel="stylesheet"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
     <header class="me">
         <div class="hero-content">
             <h1>Hi I'm Vovk Rostislav</h1>
-            <p >Aspiring Frontend Developer</p>
-        
+            <p>Aspiring Frontend Developer</p>
             <div class="buttons-row">
-                <a href="#contact-section" class="btn-primary">Contact me</a>
-                <a href="https://github.com/xVosti" target="_blank" class="btn-secondary">See my project</a>   
+                <button id="contactBtn" class="btn-primary" style="cursor: pointer;">Contact me</button>
+                <a href="#projects-section" class="btn-secondary">See my project</a>   
             </div>
         </div>
+        <button id="theme-toggle" class="theme-btn">
+            <i class="fa-solid fa-moon"></i>
+        </button>
         
         <div class="hero-image">
-            <img src="image/hero-image.jpg" alt="Rostisalv" style="max-width: 400px; border-radius: 20px;" >
+            <img src="image/hero-image.jpg" alt="Rostisalv">
         </div>
     </header>
 
-     <h2 style="text-align: center;">Tech Stack</h2>
+    <div id="contactModal" class="modal-overlay">
+    <div class="modal-content">
+        <h3>Зв'язатися зі мною</h3>
+        <div class="modal-links">
+            <a href="https://t.me/Ogonek2_20" target="_blank"><i class="fa-brands fa-telegram"></i> Telegram</a>
+            <a href="mailto:vovkrostislav131@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a>
+        </div>
+        <button id="closeBtn">Закрити</button>
+    </div>
+</div>
+
+    <h2 class="tech-title">Tech Stack</h2>
 
     <main class="info">    
         <p class="card">HTML5</p>
@@ -40,9 +53,30 @@
         </a>
     </main>
 
+    <h2 class="projects-title" id="projects-section">My Projects</h2>
+    
+    <section class="projects-container">
+        <div class="project-card">
+            <div class="project-image">
+                <img src="image/project1.png" alt="PickMe dashboard">
+            </div>
+            <div class="project-info">
+                <h3>PickMePro Privilege Store</h3>
+                <p>Automation of purchases and instant issuance of gaming privileges</p>
+                <div class="project-tags">
+                    <span>JavaScript</span>
+                    <span>HTML</span>
+                    <span>CSS</span>    
+                </div>
+                <a href="https://pickme-murex.vercel.app/" target="_blank" class="view-link">View <i class="fa-solid fa-chevron-right"></i></a>
+            </div>    
+        </div>
+    </section>
+
     <footer class="contactFlex" id="contact-section">
         <p> Contact me via Telegram <a href="https://t.me/Ogonek2_20" target="_blank">Telegram <i class="fa-brands fa-telegram"></i></a> </p>
         <p><a href="mailto:vovkrostislav131@gmail.com" class="footer-link">vovkrostislav131@gmail.com</a><i class="fa-solid fa-envelope"></i></p>
     </footer> 
+    <script src="script/contact.js"></script>
 </body>
 </html>
