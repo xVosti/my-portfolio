@@ -382,22 +382,18 @@ h1 {
 
 /* --- Theme button --- */
 .theme-btn {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1000;
-    padding: 10px;
+    width: 38px;
+    height: 38px;
     border-radius: 50%;
     border: 1px solid var(--accent-color);
-    background: var(--project-card-bg);
+    background: transparent;
     color: var(--accent-color);
     cursor: pointer;
-    transition: 0.3s;
-    width: 45px;
-    height: 45px;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: 0.3s;
+    position: static; 
 }
 
 .theme-btn:hover {
@@ -408,11 +404,20 @@ h1 {
 
 /* --- Mobile --- */
 @media (max-width: 768px) {
-    .me { flex-direction: column-reverse; padding: 40px 5%; text-align: center; }
-    .hero-content { max-width: 100%; }
-    .hero-image { width: 100%; max-width: 300px; }
-    .buttons-row { flex-direction: column; }
-    .contactFlex { flex-direction: column; gap: 20px; }
+    .contactFlex {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+        padding: 25px 5%;
+    }
+
+    .contactFlex p {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        flex-wrap: wrap;
+    }
 }
 
 
@@ -667,3 +672,10 @@ h1 {
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(56, 113, 167, 0.3);
 }
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+

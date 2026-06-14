@@ -11,11 +11,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-<button class="scroll-top" id="scrollTop">
-    <i class="fa-solid fa-arrow-up"></i>
-</button>
 <body>
-        <nav class="navbar">
+
+    <nav class="navbar">
         <div class="nav-logo">RV<span>.</span></div>
         <ul class="nav-links">
             <li><a href="#" class="nav-link active">Home</a></li>
@@ -24,11 +22,16 @@
             <li><a href="#projects-section" class="nav-link">Projects</a></li>
             <li><a href="#contact-section" class="nav-link">Contact</a></li>
         </ul>
-        <button class="nav-burger" id="navBurger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
+        <div class="nav-right">
+            <button id="theme-toggle" class="theme-btn">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+            <button class="nav-burger" id="navBurger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
     </nav>
 
     <!-- Mobile menu -->
@@ -41,6 +44,7 @@
             <li><a href="#contact-section" class="nav-link">Contact</a></li>
         </ul>
     </div>
+
     <header class="me">
         <div class="hero-content">
             <h1>Hi I'm Vovk Rostislav</h1>
@@ -49,11 +53,6 @@
                 <button id="contactBtn" class="btn-primary">Contact me</button>
             </div>
         </div>
-
-        <button id="theme-toggle" class="theme-btn">
-            <i class="fa-solid fa-moon"></i>
-        </button>
-
         <div class="hero-image">
             <img src="image/hero-image.jpg" alt="Rostislav">
         </div>
@@ -62,17 +61,17 @@
     <!-- Modal -->
     <div id="contactModal" class="modal-overlay">
         <div class="modal-content">
-            <h3>Contact me </h3>
+            <h3>Contact me</h3>
             <div class="modal-links">
                 <a href="https://t.me/Ogonek2_20" target="_blank"><i class="fa-brands fa-telegram"></i> Telegram</a>
                 <a href="mailto:vovkrostislav131@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a>
-                <a href="https://www.reddit.com/user/Ogonek2_20/"><i class="fa-brands fa-reddit"></i>Reddit</a>
+                <a href="https://www.reddit.com/user/Ogonek2_20/"><i class="fa-brands fa-reddit"></i> Reddit</a>
             </div>
             <button id="closeBtn">Close</button>
         </div>
     </div>
 
-        <!-- About -->
+    <!-- About -->
     <section class="about-section" id="about-section">
         <div class="about-content">
             <div class="about-text">
@@ -93,11 +92,12 @@
                 </div>
                 <div class="stat-card">
                     <span class="stat-number" data-target="1">0</span>
-                    <span class="stat-label">1 Years coding</span>
+                    <span class="stat-label">Years coding</span>
                 </div>
             </div>
         </div>
     </section>
+
     <h2 class="tech-title" id="skills-section">Tech Stack</h2>
 
     <main class="info">
@@ -172,6 +172,10 @@
         <p>Contact me via <a href="https://t.me/Ogonek2_20" target="_blank">Telegram <i class="fa-brands fa-telegram"></i></a></p>
         <p><a href="mailto:vovkrostislav131@gmail.com" class="footer-link">vovkrostislav131@gmail.com</a> <i class="fa-solid fa-envelope"></i></p>
     </footer>
+
+    <button class="scroll-top" id="scrollTop">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
 
 </body>
 </html>
