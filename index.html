@@ -4,75 +4,133 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume</title>
+    <script src="script/contact.js" defer></script> 
     <link href="styles.css" rel="stylesheet"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+<button class="scroll-top" id="scrollTop">
+    <i class="fa-solid fa-arrow-up"></i>
+</button>
 <body>
+        <nav class="navbar">
+        <div class="nav-logo">RV<span>.</span></div>
+        <ul class="nav-links">
+            <li><a href="#" class="nav-link active">Home</a></li>
+            <li><a href="#about-section" class="nav-link">About</a></li>
+            <li><a href="#skills-section" class="nav-link">Skills</a></li>
+            <li><a href="#projects-section" class="nav-link">Projects</a></li>
+            <li><a href="#contact-section" class="nav-link">Contact</a></li>
+        </ul>
+        <button class="nav-burger" id="navBurger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div class="nav-mobile" id="navMobile">
+        <ul>
+            <li><a href="#" class="nav-link">Home</a></li>
+            <li><a href="#about-section" class="nav-link">About</a></li>
+            <li><a href="#skills-section" class="nav-link">Skills</a></li>
+            <li><a href="#projects-section" class="nav-link">Projects</a></li>
+            <li><a href="#contact-section" class="nav-link">Contact</a></li>
+        </ul>
+    </div>
     <header class="me">
         <div class="hero-content">
             <h1>Hi I'm Vovk Rostislav</h1>
-            <p>Aspiring Frontend Developer</p>
+            <p>Frontend Developer</p>
             <div class="buttons-row">
-                <button id="contactBtn" class="btn-primary" style="cursor: pointer;">Contact me</button>
-                <a href="#projects-section" class="btn-secondary">See my project</a>   
+                <button id="contactBtn" class="btn-primary">Contact me</button>
             </div>
         </div>
+
         <button id="theme-toggle" class="theme-btn">
             <i class="fa-solid fa-moon"></i>
         </button>
-        
+
         <div class="hero-image">
-            <img src="image/hero-image.jpg" alt="Rostisalv">
+            <img src="image/hero-image.jpg" alt="Rostislav">
         </div>
     </header>
 
+    <!-- Modal -->
     <div id="contactModal" class="modal-overlay">
-    <div class="modal-content">
-        <h3>Зв'язатися зі мною</h3>
-        <div class="modal-links">
-            <a href="https://t.me/Ogonek2_20" target="_blank"><i class="fa-brands fa-telegram"></i> Telegram</a>
-            <a href="mailto:vovkrostislav131@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a>
+        <div class="modal-content">
+            <h3>Contact me </h3>
+            <div class="modal-links">
+                <a href="https://t.me/Ogonek2_20" target="_blank"><i class="fa-brands fa-telegram"></i> Telegram</a>
+                <a href="mailto:vovkrostislav131@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a>
+                <a href="https://www.reddit.com/user/Ogonek2_20/"><i class="fa-brands fa-reddit"></i>Reddit</a>
+            </div>
+            <button id="closeBtn">Close</button>
         </div>
-        <button id="closeBtn">Закрити</button>
     </div>
-</div>
 
-    <h2 class="tech-title">Tech Stack</h2>
+        <!-- About -->
+    <section class="about-section" id="about-section">
+        <div class="about-content">
+            <div class="about-text">
+                <h2>About <span>Me</span></h2>
+                <p>Hi! I'm Rostislav, a Frontend Developer based in Ukraine. I love building clean, responsive, and user-friendly web experiences.</p>
+                <p>I started my journey with HTML & CSS, and quickly fell in love with JavaScript and React. I enjoy turning ideas into real products that people actually use.</p>
+                <p>When I'm not coding, you'll probably find me into cars, music, or exploring new tech.</p>
+                <a href="#contact-section" class="btn-primary" style="display:inline-block; margin-top: 20px;">Get in touch</a>
+            </div>
+            <div class="about-stats">
+                <div class="stat-card">
+                    <span class="stat-number" data-target="4">0</span>
+                    <span class="stat-label">Projects</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number" data-target="3">0</span>
+                    <span class="stat-label">Technologies</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number" data-target="1">0</span>
+                    <span class="stat-label">1 Years coding</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <h2 class="tech-title" id="skills-section">Tech Stack</h2>
 
-    <main class="info">    
+    <main class="info">
         <p class="card">HTML5</p>
         <p class="card">CSS3</p>
         <p class="card">JavaScript</p>
         <p class="card">React</p>
         <a href="https://github.com/xVosti" target="_blank" class="card github-card">
-            <i class="fa-brands fa-github"></i> 
+            <i class="fa-brands fa-github"></i>
             <span>My GitHub</span>
         </a>
     </main>
 
     <h2 class="projects-title" id="projects-section">My Projects</h2>
-    
+
     <section class="projects-container">
         <div class="project-card">
             <div class="project-image">
                 <img src="image/project1.png" alt="PickMe dashboard">
             </div>
-            <div class="project-info"> <!-- PickMe -->
+            <div class="project-info">
                 <h3>PickMePro Privilege Store</h3>
                 <p>Automation of purchases and instant issuance of gaming privileges</p>
                 <div class="project-tags">
                     <span>JavaScript</span>
                     <span>HTML</span>
-                    <span>CSS</span>    
+                    <span>CSS</span>
                 </div>
                 <a href="https://pickme-murex.vercel.app/" target="_blank" class="view-link">View <i class="fa-solid fa-chevron-right"></i></a>
-            </div>    
+            </div>
         </div>
 
-        <div class="project-card"> <!-- Resume2 Dark-->
+        <div class="project-card">
             <div class="project-image">
                 <img src="image/project2.png" alt="My Resume Website">
             </div>
@@ -82,54 +140,38 @@
                 <div class="project-tags">
                     <span>JavaScript</span>
                     <span>HTML</span>
-                    <span>CSS</span>    
+                    <span>CSS</span>
                 </div>
                 <a href="https://landing-rpage-xvostik.vercel.app/" target="_blank" class="view-link">View <i class="fa-solid fa-chevron-right"></i></a>
-            </div>    
-        </div>
-
-        <div class="project-card"> <!-- Own Portfolio -->
-            <div class="project-image">
-                <img src="image/project3.png" alt="Landing Page">
             </div>
-            <div class="project-info">
-                <h3>Responsive Landing Page</h3>
-                <p>A modern, responsive landing page built with clean code</p>
-                <div class="project-tags">
-                    <span>HTML</span>
-                    <span>CSS</span>    
-                </div>
-                <a href="https://xvostik-resume.vercel.app/" target="_blank" class="view-link">View <i class="fa-solid fa-chevron-right"></i></a>
-            </div>    
         </div>
 
-         <div class="project-card"> <!-- AI Resume  -->
+        <div class="project-card">
             <div class="project-image">
                 <img src="image/AiResume.png" alt="AI resume generator">
             </div>
             <div class="project-info">
-                <h3>AI Resume generator</h3>
+                <h3>AI Resume Generator</h3>
                 <p>Simple AI-based resume generator Qrok</p>
                 <div class="project-tags">
                     <span>HTML5/CSS3</span>
-                    <span>React/React Router DOM</span> 
+                    <span>React/React Router DOM</span>
                     <span>Node.js</span>
-                    <span>Express.js </span>   
-                    <span>REST API </span>
+                    <span>Express.js</span>
+                    <span>REST API</span>
                     <span>Supabase/PostgreSQL</span>
                     <span>JWT</span>
                     <span>GroqAPI</span>
                 </div>
                 <a href="https://ai-resume-generator-ten-virid.vercel.app/" target="_blank" class="view-link">View <i class="fa-solid fa-chevron-right"></i></a>
-            </div>    
+            </div>
         </div>
-
     </section>
 
     <footer class="contactFlex" id="contact-section">
-        <p> Contact me via Telegram <a href="https://t.me/Ogonek2_20" target="_blank">Telegram <i class="fa-brands fa-telegram"></i></a> </p>
-        <p><a href="mailto:vovkrostislav131@gmail.com" class="footer-link">vovkrostislav131@gmail.com</a><i class="fa-solid fa-envelope"></i></p>
-    </footer> 
-    <script src="script/contact.js"></script>
+        <p>Contact me via <a href="https://t.me/Ogonek2_20" target="_blank">Telegram <i class="fa-brands fa-telegram"></i></a></p>
+        <p><a href="mailto:vovkrostislav131@gmail.com" class="footer-link">vovkrostislav131@gmail.com</a> <i class="fa-solid fa-envelope"></i></p>
+    </footer>
+
 </body>
 </html>
